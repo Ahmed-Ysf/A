@@ -1,0 +1,23 @@
+#include "horloge.h"
+
+
+
+bool Horloge::AvancerHeures()
+{
+    heures++;
+}
+
+bool Horloge::AvancerMinutes()
+{
+    minutes++;
+}
+
+void Horloge::ReculerHeures()
+{
+    heures--;
+}
+
+void Horloge::ReculerMinutes()
+{
+    minutes--;
+}

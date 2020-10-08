@@ -1,0 +1,23 @@
+#include <iostream>
+#include "clavier.h"
+#include "horloge.h"
+using namespace std;
+
+int main()
+{
+    TOUCHES_CLAVIER touche;
+    Clavier leClavier;
+    do
+    {
+        touche = leClavier.ScruterClavier();
+        if(touche != AUCUNE)
+        {
+            cout << touche << endl;
+        }
+
+    }while(touche != FIN);
+Horloge uneHorloge;
+while(1);
+    return 0;
+}
+

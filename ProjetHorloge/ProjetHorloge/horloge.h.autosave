@@ -1,0 +1,33 @@
+#ifndef HORLOGE_H
+#define HORLOGE_H
+#include <time.h>
+enum MODES_HORLOGE{
+    AUCUN_REGLAGE=0,
+    REGLAGE_HEURES,
+    REGLAGE_MINUTES
+};
+
+class Horloge
+{
+public:
+    Horloge(const int _nbModes, const int _resolution=24);
+    ~Horloge();
+    bool AvancerHeures();
+    bool AvancerMinutes();
+    void ReculerHeures();
+    void ReculerMinutes();
+    TOUCHES_CLAVIER Controler(const TOUCHES_CLAVIER _numTouche);
+    void ChangerMode();
+private:
+    Cadran *leCadran;
+    Clavier *leClavier;
+    int heures;
+    int minutes;
+    const int resolution;
+    MODES_HORLOGE mode;
+    const int nbModes;
+    time_t valAvant;
+};
+
+#endif // HORLOGE_H
+
